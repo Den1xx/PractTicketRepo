@@ -1,0 +1,17 @@
+:root { --brand: #4f46e5; --brand-dark: #3730a3; --page: #f5f7fb; }
+    body { background: var(--page); color: #182230; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .navbar { background: #fff; border-bottom: 1px solid #e8ebf2; }
+    .brand-mark { display:inline-grid; place-items:center; width:36px; height:36px; border-radius:11px; background:var(--brand); color:white; font-weight:800; margin-right:10px; }
+    .hero { background:linear-gradient(120deg,#3730a3,#6366f1); color:white; border-radius:24px; padding:48px; overflow:hidden; position:relative; }
+    .hero:after { content:""; position:absolute; width:260px; height:260px; border:38px solid rgba(255,255,255,.09); border-radius:50%; right:-55px; top:-95px; }
+    .hero > * { position:relative; z-index:1; }
+    .btn-brand { background:var(--brand); border-color:var(--brand); color:white; }
+    .btn-brand:hover { background:var(--brand-dark); border-color:var(--brand-dark); color:white; }
+    .panel { background:white; border:1px solid #e8ebf2; border-radius:18px; box-shadow:0 8px 28px rgba(30,41,59,.04); }
+    .icon-tile { width:46px; height:46px; border-radius:14px; display:grid; place-items:center; background:#eef2ff; color:var(--brand); font-size:22px; }
+    .form-control, .form-select { padding:.75rem .9rem; border-color:#dce1eb; border-radius:10px; }
+    .form-control:focus, .form-select:focus { border-color:#818cf8; box-shadow:0 0 0 .2rem rgba(99,102,241,.15); }
+    .ticket-row { border:1px solid #e8ebf2; border-radius:12px; padding:15px; }
+    .muted { color:#667085; }
+    .hidden { display:none !important; }
+    @media (max-width: 576px) { .hero { padding:30px 24px; } .hero h1 { font-size:1.8rem; } }

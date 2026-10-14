@@ -1,0 +1,66 @@
+﻿<section id="formPage">
+    <button class="btn btn-link text-decoration-none px-0 mb-3" id="backBtn">← Ana sayfaya dön</button>
+    <div class="panel p-4 p-lg-5">
+        <div class="mb-4">
+            <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis mb-2">Yeni destek talebi</span>
+            <h2 class="fw-bold">Talep oluştur</h2>
+            <p class="muted mb-0">Lütfen aşağıdaki alanları doldurun. * işaretli alanlar zorunludur.</p>
+        </div>
+        <div id="formAlert" class="alert alert-success hidden" role="alert">Talebiniz başarıyla oluşturuldu!</div>
+        <form id="ticketForm" novalidate>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="firstName" class="form-label fw-semibold">İsim *</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Örn. Deniz" required>
+                    <div class="invalid-feedback">Lütfen isminizi girin.</div>
+                </div>
+                <div class="col-md-6">
+                    <label for="lastName" class="form-label fw-semibold">Soyisim *</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Örn. Yılmaz" required>
+                    <div class="invalid-feedback">Lütfen soyisminizi girin.</div>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label fw-semibold">E-posta adresi *</label>
+                    <input type="email" class="form-control" id="email" placeholder="ornek@eposta.com" required>
+                    <div class="invalid-feedback">Geçerli bir e-posta adresi girin.</div>
+                </div>
+                <div class="col-md-6">
+                    <label for="category" class="form-label fw-semibold">Talep konusu *</label>
+                    <select class="form-select" id="category" required>
+                        <option value="" selected disabled>Konu seçin</option>
+                        <option>Teknik destek</option>
+                        <option>Hesap ve erişim</option>
+                        <option>Ödeme ve faturalandırma</option>
+                        <option>Genel soru</option>
+                        <option>Diğer</option>
+                    </select>
+                    <div class="invalid-feedback">Lütfen bir konu seçin.</div>
+                </div>
+                <div class="col-12">
+                    <label for="subject" class="form-label fw-semibold">Başlık *</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Talebinizi kısaca özetleyin" required maxlength="120">
+                    <div class="invalid-feedback">Lütfen bir başlık girin.</div>
+                </div>
+                <div class="col-md-6">
+                    <label for="priority" class="form-label fw-semibold">Öncelik</label>
+                    <select class="form-select" id="priority">
+                        <option>Normal</option>
+                        <option>Düşük</option>
+                        <option>Yüksek</option>
+                        <option>Acil</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <label for="description" class="form-label fw-semibold">Açıklama *</label>
+                    <textarea class="form-control" id="description" rows="5" placeholder="Sorunu veya isteğinizi detaylı şekilde açıklayın..." required minlength="10"></textarea>
+                    <div class="form-text">En az 10 karakter yazın; varsa hata mesajını ve yaptığınız işlemleri belirtin.</div>
+                    <div class="invalid-feedback">Lütfen en az 10 karakterlik bir açıklama girin.</div>
+                </div>
+                <div class="col-12 d-flex flex-column flex-sm-row gap-2 justify-content-end pt-2">
+                    <button type="button" class="btn btn-outline-secondary px-4" id="cancelBtn">İptal</button>
+                    <button type="submit" class="btn btn-brand px-4">Talebi gönder →</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Destek Merkezi";
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="~/css/site.css" rel="stylesheet">
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container py-2">
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="#" id="homeLink">
+            <span class="brand-mark">D</span> Destek Merkezi
+        </a>
+        <span class="small muted d-none d-sm-inline">Ticket yönetim sistemi</span>
+    </div>
+</nav>
+
+<main class="container py-4 py-lg-5">
+    <section id="homePage">
+        <div class="hero mb-4 mb-lg-5">
+            <span class="badge rounded-pill text-bg-light mb-3 px-3 py-2">Yardım ve destek</span>
+            <h1 class="display-5 fw-bold mb-3">Size nasıl yardımcı olabiliriz?</h1>
+            <p class="lead mb-4" style="max-width:620px;color:#e0e7ff">Bir sorun mu yaşıyorsunuz veya bir isteğiniz mi var? Destek talebinizi oluşturun, ekibimiz sizinle ilgilensin.</p>
+            <a asp-controller="Home" asp-action="Ticket" class="btn btn-light btn-lg fw-semibold" id="newTicketBtn">＋ Yeni talep oluştur</a>
+        </div>
+
+        <div class="row g-3 g-lg-4 mb-4">
+            <div class="col-md-4"><div class="panel p-4 h-100"><div class="icon-tile mb-3">✉</div><h5 class="fw-bold">Talep oluştur</h5><p class="muted mb-0">Sorununuzu açıklayın ve destek ekibimize iletin.</p></div></div>
+            <div class="col-md-4"><div class="panel p-4 h-100"><div class="icon-tile mb-3">◷</div><h5 class="fw-bold">Durumu takip edin</h5><p class="muted mb-0">Oluşturduğunuz talepleri bu sayfada görüntüleyin.</p></div></div>
+            <div class="col-md-4"><div class="panel p-4 h-100"><div class="icon-tile mb-3">✓</div><h5 class="fw-bold">Çözüm odaklı destek</h5><p class="muted mb-0">Talebinizin konusu ve önceliği ekibin yönlendirme yapmasına yardımcı olur.</p></div></div>
+        </div>
+
+        <div class="panel p-4 p-lg-5">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                <div><h4 class="fw-bold mb-1">Son taleplerim</h4><p class="muted mb-0">Bu oturumda oluşturduğunuz talepler</p></div>
+                <span class="badge rounded-pill text-bg-light px-3 py-2" id="ticketCount">0 talep</span>
+            </div>
+            <div id="emptyState" class="text-center py-4">
+                <div class="fs-1 mb-2">📭</div><h6 class="fw-semibold">Henüz bir talep oluşturmadınız</h6><p class="muted mb-3">Başlamak için “Yeni talep oluştur” butonuna basın.</p>
+                <button class="btn btn-outline-primary" id="emptyNewTicketBtn">Talep oluştur</button>
+            </div>
+            <div id="ticketList" class="d-grid gap-2"></div>
+        </div>
+    </section>
+
+
+    
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js"></script>
